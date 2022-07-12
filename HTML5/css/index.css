@@ -23,25 +23,22 @@ body{
 
 .header{
   background-color: yellow;
-  height: 10vh;
 }
 
 .visual{
   background-color: pink;
-  height: 10vh;
 }
 
 .main{
+  display: flow-root;
   background-color: blue;
-  padding: 30px 0;
-  display: flex;
-  height: 40vh;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
+  padding: 30px 15px;
 }
 
 .group{
-  background-color: skyblue;
+  float: left;
+  background-color: lightblue;
+  margin: 0 15px;
 }
 
 .group1{
@@ -58,7 +55,6 @@ body{
 
 .slogan{
   background-color: lime;
-  height: 10vh;
 }
 
 .footer{
@@ -67,5 +63,4 @@ body{
 
 .footer-inner{
   background-color: coral;
-  height: 10vh;
 }
