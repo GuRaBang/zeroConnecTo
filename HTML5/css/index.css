@@ -251,62 +251,89 @@ body{
 
 /* 로그인 */
 .login{
-  display: relative;
-  background-color: orange;
-  border-radius: 3px;
-  width: 290px;
+  background: #ed552f radial-gradient(circle at right top, #e8852e , #ed552f);
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 5px 5px 0 0 #aaa;
+}
+
+.login-title{
+  color: #ff0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-indent: 10px;
 }
 
 .login-form{
+  margin-top: 10px;
   background-color: white;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-  width: 280px;
+  padding: 10px 10px 0 10px;
+  border-radius: 5px 5px 0 0;
 }
 
-.user-email, .user-pwd{
+.login-form fieldset{
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 10px;
+
+}
+
+.user-email{
+  margin-bottom: 5px;
+}
+
+.login-form label{
+  width: 56px;
   display: inline-block;
-  width: 210px;
 }
 
-input{
-  width: 150px;
+.login-form input{
+  width: 90px;
+  height: 24px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 2px 2px 2px .5em;
+}
+
+.login-button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 53px;
+  padding: 0;
+  font-size: 1.3rem;
+  color: white;
+  background-color: #ed552f;
+  border: 0;
+  border-radius: 4px;
 }
 
 .sign{
   background-color: white;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-  width: 280px;
+  padding: 4px 10px;
+  border-radius: 0 0 5px 5px;
+  display: flow-root;
 }
 
-.sign > li {
-  display: inline-block;
-  line-height: 20px;
+.sign li:first-child{
+  float: left;
 }
 
-
-.login-button{
-  display: float;
-  background-color: orange;
-  border: none;
-  color: white;
-  border-radius: 2px;
-  width: 50px;
-  height: 50px;
+.sign li:last-child{
+  float: right;
 }
 
+.sign a{
+  display: block;
+  padding: 6px 0;
+  font-size: 1.3rem;
+  letter-spacing: -1px;
+}
 
-
-
-
-
-
-
-
-
-
-/*  */
+.sign .icon-right-open::before{
+  color: #ed552f;
+}
 
 .slogan{
   background-color: lime;
