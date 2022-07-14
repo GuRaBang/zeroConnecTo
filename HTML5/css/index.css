@@ -335,23 +335,32 @@ body{
   color: #ed552f;
 }
 
-.html-validator, .css-validator{
-  margin: 10px 0;
-  padding: 5px 10px;
-  background-image: url(./images/validation_icon.png);
-  background: linear-gradient(to bottom, grey, lightgrey);
-  background-position: 10px 5px;
-  background-repeat: no-repeat;
-  border: 1px solid grey;
-  border-radius: 15px;
-  text-indent: 30px;
+/* 유효성 검사 */
+.validation-list{
+  margin-top: 25px;
+  border: 1px solid transparent;
+}
+
+.validation-list li{
+  margin-top: 10px;
+}
+
+.validation-list a{
+  background: url(./images/validation_icon.png) no-repeat 20px 50% / 16px 16px, #aaa linear-gradient(to bottom, #ccc, #aaa);
+  display: block;
+  padding: 10px;
+  border-radius: 50px;
+  padding-left: 45px;
 }
 
 .html-validator{
   margin-top: 20px;
 }
 
-
+.validation-list a:hover, .validation-list a:focus{
+  color: #f00;
+  background-size: 14px 14px, 100%;
+}
 
 .slogan{
   background-color: lime;
