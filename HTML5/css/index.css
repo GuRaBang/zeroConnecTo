@@ -363,19 +363,35 @@ body{
 }
 
 .term{
-  padding: 10px;
+  background: #aaa linear-gradient(to bottom, #ccc, #aaa);
+  margin-top: 20px;
+  padding: 15px;
   border: 1px solid #aaa;
-  border-radius: 4px;
-  background:  #aaa linear-gradient(to bottom, #ccc, #aaa);;
+  border-radius: 5px;
 }
 
 .term-title{
   font-weight: 600;
 }
 
-.term-contents h3{
+.term-list{
+  margin-top: 15px;
+}
+
+.term-list-subject{
   font-weight: 600;
   color: navy;
+  margin-bottom: 5px;
+  float: right;
+}
+
+.term-list-thumbnail{
+  float: left;
+  margin-right: 10px;
+}
+
+.term-list-brief{
+  padding-top:20px;
 }
 
 .slogan{
