@@ -335,6 +335,24 @@ body{
   color: #ed552f;
 }
 
+.html-validator, .css-validator{
+  margin: 10px 0;
+  padding: 5px 10px;
+  background-image: url(./images/validation_icon.png);
+  background: linear-gradient(to bottom, grey, lightgrey);
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  border: 1px solid grey;
+  border-radius: 15px;
+  text-indent: 30px;
+}
+
+.html-validator{
+  margin-top: 20px;
+}
+
+
+
 .slogan{
   background-color: lime;
 }
