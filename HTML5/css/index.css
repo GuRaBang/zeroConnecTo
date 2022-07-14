@@ -6,7 +6,7 @@
 
 
 /* 숨김컨텐츠 */
-.sr-only{
+.sr-only, legend{
   position: absolute;
   width: 1px;
   height: 1px;
@@ -120,7 +120,7 @@ body{
 .menu-item.is-active .menu-button::after{
   content: "";
   display: block;
-  background: #000;
+  background: black;
   height: 2px;
 }
 
@@ -198,7 +198,6 @@ body{
   animation-name: moveEffect;
   animation-duration: 2000ms;
   animation-fill-mode: forwards;
-  background: lime;
   display: inline-block;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
