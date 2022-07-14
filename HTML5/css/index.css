@@ -371,28 +371,51 @@ body{
 }
 
 .term-title{
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .term-list{
   margin-top: 15px;
 }
 
+.term-list div{
+  display: flow-root;
+  margin-top: 10px;
+}
+
 .term-list-subject{
-  font-weight: 600;
-  color: navy;
-  margin-bottom: 5px;
-  float: right;
+  width: 145px;
+  color: #296897;
 }
 
 .term-list-thumbnail{
-  float: left;
-  margin-right: 10px;
+  position: relative;
+  top: 1px;
+}
+
+.term-list-thumbnail img{
+  vertical-align: top;
 }
 
 .term-list-brief{
-  padding-top:20px;
+  width: 145px;
+  margin-top: 5px;
+  line-height: 1.5rem;
 }
+
+.even .term-list-brief,
+.even .term-list-subject,
+.odd .term-list-thumbnail{
+  float: left;
+}
+
+.odd .term-list-brief,
+.odd .term-list-subject,
+.even .term-list-thumbnail{
+  float: right;
+}
+
 
 .slogan{
   background-color: lime;
