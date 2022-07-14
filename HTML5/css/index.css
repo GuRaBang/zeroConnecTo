@@ -190,7 +190,6 @@ body{
 
 .visual{
   position: relative;
-  background-color: pink;
   height: 120px;
 }
 
@@ -227,13 +226,14 @@ body{
 
 .main{
   display: flow-root;
-  background-color: blue;
+  background-color:white;
   padding: 30px 15px;
+  border-radius: 15px 15px 0 0;
+  min-height: 400px;
 }
 
 .group{
   float: left;
-  background-color: lightblue;
   margin: 0 15px;
 }
 
@@ -248,6 +248,65 @@ body{
 .group3{
   width: 190px;
 }
+
+/* 로그인 */
+.login{
+  display: relative;
+  background-color: orange;
+  border-radius: 3px;
+  width: 290px;
+}
+
+.login-form{
+  background-color: white;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  width: 280px;
+}
+
+.user-email, .user-pwd{
+  display: inline-block;
+  width: 210px;
+}
+
+input{
+  width: 150px;
+}
+
+.sign{
+  background-color: white;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  width: 280px;
+}
+
+.sign > li {
+  display: inline-block;
+  line-height: 20px;
+}
+
+
+.login-button{
+  display: float;
+  background-color: orange;
+  border: none;
+  color: white;
+  border-radius: 2px;
+  width: 50px;
+  height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*  */
 
 .slogan{
   background-color: lime;
