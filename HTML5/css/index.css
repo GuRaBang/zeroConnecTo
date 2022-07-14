@@ -362,6 +362,22 @@ body{
   background-size: 14px 14px, 100%;
 }
 
+.term{
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background:  #aaa linear-gradient(to bottom, #ccc, #aaa);;
+}
+
+.term-title{
+  font-weight: 600;
+}
+
+.term-contents h3{
+  font-weight: 600;
+  color: navy;
+}
+
 .slogan{
   background-color: lime;
 }
