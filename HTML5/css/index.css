@@ -455,6 +455,55 @@ body{
   border-radius: 4px;
 }
 
+/* 공지사항 및 자료실 */
+.board{
+  margin-top: 20px;
+  position: relative;
+}
+
+.board-panel, .board-more{
+  display: none;
+}
+
+.board-tab{
+  margin-bottom: 5px;
+}
+
+.is-select ul, .is-select .board-more{
+  display: block;
+}
+
+.is-select button{
+  border: 0;
+  background: transparent;
+  border: 1px solid #ed552f;
+  border-radius: 3px 3px 0 0;
+  border-bottom-color: transparent;
+  color: #ed552f;
+}
+
+.board-panel li{
+ padding: 5px 0px; 
+ display: flex;
+ justify-content: space-between;
+}
+
+.board-panel a{
+  overflow: hidden;
+}
+
+.archive-tab{
+  position: absolute;
+  top: 0px;
+  left: 64px;
+}
+
+.board-more{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
 .slogan{
   background-color: lime;
 }
