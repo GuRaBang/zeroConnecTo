@@ -380,14 +380,15 @@ body{
 }
 
 .term-list div{
-  display: flow-root;
   margin-top: 10px;
+  display: flow-root;
 }
 
 .term-list-subject{
   width: 145px;
   color: #296897;
 }
+
 
 .term-list-thumbnail{
   position: relative;
@@ -404,9 +405,9 @@ body{
   line-height: 1.5rem;
 }
 
+.odd .term-list-thumbnail,
 .even .term-list-brief,
-.even .term-list-subject,
-.odd .term-list-thumbnail{
+.even .term-list-subject{
   float: left;
 }
 
@@ -414,6 +415,32 @@ body{
 .odd .term-list-subject,
 .even .term-list-thumbnail{
   float: right;
+}
+
+
+.search-form{
+  display: flex;
+  justify-content: space-around;
+  background:  #aaa linear-gradient(to bottom, #ccc, #aaa);
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+  border-radius: 4px 4px 0 0;
+  padding: 5px 0;
+}
+
+.search-form input{
+  width: 150px;
+}
+
+.search-btn{
+  line-height: 30px;
+  border: 0;
+  border-radius: 3px;
+  padding: 0 10px;
+  background: black;
+  font-size: 1.6rem;
+  color: white;
 }
 
 
