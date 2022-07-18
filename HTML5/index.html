@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" />
   <title>웹카페 - HTML5</title>
   <link rel="stylesheet" href="./css/index.css" />
 </head>
@@ -120,16 +121,16 @@
           <button type="button" class="menu-button">자료실</button>
           <ul class="sub-menu menu-archive">
             <li>
-              <a href="#">공개 자료실</a>
+              <a href="/">공개 자료실</a>
             </li>
             <li>
-              <a href="#">이미지 자료실</a>
+              <a href="/">이미지 자료실</a>
             </li>
             <li>
-              <a href="#">웹표준 자료실</a>
+              <a href="/">웹표준 자료실</a>
             </li>
             <li>
-              <a href="#">웹 접근성 자료실</a>
+              <a href="/">웹 접근성 자료실</a>
             </li>
           </ul>
         </li>
@@ -143,6 +144,7 @@
   </div>
   <main class="main">
     <div class="group group1">
+      <!-- 로그인 -->
       <section class="login">
         <h2 class="login-title">로그인</h2>
         <form method="POST" action="https://formspree.io/seulbinim@gmail.com" class="login-form">
@@ -154,29 +156,35 @@
             </div>
             <div class="user-pwd">
               <label for="userPwd">비밀번호</label>
-              <input type="password" id="userPwd" required="required" placeholder="여덟자리 이상" />
+              <input type="password" id="userPwd" required="required" placeholder="8자리 이상" />
             </div>
             <button type="submit" class="login-button">로그인</button>
           </fieldset>
         </form>
         <ul class="sign">
           <li><a href="/" class="icon-right-open">회원가입</a></li>
-          <li><a href="/" class="icon-right-open">아이디/비밀번호 찾기</a></li>
+          <li><a href="/" class="icon-right-open">아이디 비밀번호 찾기</a></li>
         </ul>
       </section>
+      <!-- 유효성 검사 배너 링크 그룹 -->
       <h2 class="sr-only">유효성 검사 배너</h2>
       <ul class="validation-list">
         <li>
-          <a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer" title="마크업 유효성 검사 사이트로 이동(새창)">W3C Markup Validation</a>
+          <a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">
+            W3C Markup Validation
+          </a>
         </li>
         <li>
-          <a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener noreferrer" title="CSS 유효성 검사 사이트로 이동(새창)">CSS Validation Service</a>
+          <a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener noreferrer">
+            CSS Validation Service
+          </a>
         </li>
       </ul>
+      <!-- 웹 관련 용어 -->
       <section class="term">
         <h2 class="term-title">웹 관련 용어</h2>
-        <dl class="term-list">
-          <div class="odd">
+        <div class="odd">
+          <dl class="term-list">
             <dt class="term-list-subject">웹 표준 이란?</dt>
             <dd class="term-list-thumbnail">
               <img src="./assets/web_standards.gif" alt="W3C 로고" />
@@ -184,8 +192,10 @@
             <dd class="term-list-brief">
               W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...
             </dd>
-          </div>
-          <div class="even">
+          </dl>
+        </div>
+        <div class="even">
+          <dl class="term-list">
             <dt class="term-list-subject">웹 표준 이란?</dt>
             <dd class="term-list-thumbnail">
               <img src="./assets/web_standards.gif" alt="W3C 로고" />
@@ -193,8 +203,8 @@
             <dd class="term-list-brief">
               W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...
             </dd>
-          </div>
-        </dl>
+          </dl>
+        </div>
       </section>
     </div>
     <div class="group group2">
@@ -202,124 +212,144 @@
       <form method="POST" action="https://formspree.io/seulbinim@gmail.com" class="search-form">
         <fieldset>
           <legend>검색 폼</legend>
-          <label for="search"><i class="icon-search" aria-hidden="true"></i>자료검색</label>
-          <input type="search" id="search" name="search" required="required" placeholder="검색어를 입력하세요"/>
-          <button class="search-button" type="submit">검색</button>
+            <label for="search"><i class="icon-search" aria-hidden="true"></i>
+              자료검색
+            </label>
+            <input type="search" id="search" name="search" required="required" placeholder="검색어를 입력하세요."/>
+            <button type="submit" class="search-button">검색</button>
         </fieldset>
       </form>
       <!-- <div class="board">
         <section class="notice board-section is-select">
-          <h2 class="sr-only board-tab notice-title" id="noticeTitle">공지사항</h2>
-          <button class="board-tab notice-tab">공지사항</button>
+          <h2 class="sr-only notice-title" id="noticeTitle">공지사항</h2>
+          <button type="button" class="board-tab notice-tab">공지사항</button>
           <ul class="notice-list board-panel">
             <li>
-              <a class="icon-dot-circled" href="#">HTML의 모든 것을 알려주마 샘플 활용법</a>
+              <a class="icon-dot-circled" href="/">HTML의 모든 것을 알려주마 샘플 활용법</a>
               <time datetime="2021-08-12T13:53:45">2021.08.12</time>
             </li>
             <li>
-              <a class="icon-dot-circled" href="#">W3C 사이트 리뉴얼 및 공지사항</a>
+              <a class="icon-dot-circled" href="/">W3C 사이트 리뉴얼 및 공지사항</a>
               <time datetime="2021-08-12T13:53:45">2021.08.12</time>
             </li>
             <li>
-              <a class="icon-dot-circled" href="#">KWCAG 2.1 소식</a>
+              <a class="icon-dot-circled" href="/">KWCAG 2.1 소식</a>
               <time datetime="2021-08-12T13:53:45">2021.08.12</time>
             </li>
             <li>
-              <a class="icon-dot-circled" href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a>
+              <a class="icon-dot-circled" href="/">서버 점검으로 인한 사이트 이용안내 입니다.</a>
               <time datetime="2021-08-12T13:53:45">2021.08.12</time>
             </li>
             <li>
-              <a class="icon-dot-circled" href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
+              <a class="icon-dot-circled" href="/">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
               <time datetime="2021-08-12T13:53:45">2021.08.12</time>
             </li>
           </ul>
-          <a href="#" class="icon-plus more board-more" title="공지사항" aria-labelledby="noticeTitle">더보기</a>
+          <a href="/" class="icon-plus more board-more" title="공지사항" aria-labelledby="noticeTitle">더보기</a>
         </section>
         <section class="archive board-section">
           <h2 class="sr-only archive-title" id="archiveTitle">자료실</h2>
           <button class="board-tab archive-tab">자료실</button>
           <ul class="archive-list board-panel">
             <li>
-              <a class="icon-dot-circled" href="#">디자인 사이트 링크 모음</a>
+              <a class="icon-dot-circled" href="/">디자인 사이트 링크 모음</a>
               <time datetime="2021-08-12T13:53:45">2021.08.12</time>
             </li>
             <li>
-              <a class="icon-dot-circled" href="#">웹 접근성 관련 자료 모음</a>
+              <a class="icon-dot-circled" href="/">웹 접근성 관련 자료 모음</a>
               <time datetime="2021-08-12T13:53:45">2021.08.12</time>
             </li>
             <li>
-              <a class="icon-dot-circled" href="#">예제 샘플 응용해보기</a>
+              <a class="icon-dot-circled" href="/">예제 샘플 응용해보기</a>
               <time datetime="2021-08-12T13:53:45">2021.08.12</time>
             </li>
             <li>
-              <a class="icon-dot-circled" href="#">웹 접근성 향상을위한 국가 표준 기술 가이드라인</a>
+              <a class="icon-dot-circled" href="/">웹 접근성 향상을위한 국가 표준 기술 가이드라인</a>
               <time datetime="2021-08-12T13:53:45">2021.08.12</time>
             </li>
             <li>
-              <a class="icon-dot-circled" href="#">로얄티 프리 이미지 자료</a>
+              <a class="icon-dot-circled" href="/">로얄티 프리 이미지 자료</a>
               <time datetime="2021-08-12T13:53:45">2021.08.12</time>
             </li>    
           </ul>
-          <a href="#" class="icon-plus more board-more" title="자료실" aria-labelledby="archiveTitle">더보기</a>
-        </section>
+          <a href="/" class="icon-plus more board-more" title="자료실" aria-labelledby="archiveTitle">더보기</a>
+        </section>  
       </div> -->
       <div class="board">
-        <div class="tab-list" role="tablist">
-          <button type="button" class="tab" role="tab" aria-selected="true" id="buttonNotice" aria-controls="panelNotice">공지사항</button>
-          <button type="button" class="tab" role="tab" aria-selected="false" id="buttonArchive" aria-controls="panelArchive">자료실</button>
+        <div role="tablist" class="tab-list">
+          <button type="button" role="tab" class="tab is-select" aria-selected="true" id="buttonNotice" aria-controls="panelNotice">공지사항</button>
+          <button type="button" role="tab" class="tab" aria-selected="false" id="buttonArchive" aria-controls="panelArchive">자료실</button>
         </div>
-        <div>
-          <div role="tabpanel" class="tab-pannel" id="panelNotice" aria-labelledby="buttonNotice">
-            <ul class="notice-list board-list">
-              <li>
-                <a class="icon-dot-circled" href="#">HTML의 모든 것을 알려주마 샘플 활용법</a>
-                <time datetime="2021-08-12T13:53:45">2021.08.12</time>
-              </li>
-              <li>
-                <a class="icon-dot-circled" href="#">W3C 사이트 리뉴얼 및 공지사항</a>
-                <time datetime="2021-08-12T13:53:45">2021.08.12</time>
-              </li>
-              <li>
-                <a class="icon-dot-circled" href="#">KWCAG 2.1 소식</a>
-                <time datetime="2021-08-12T13:53:45">2021.08.12</time>
-              </li>
-              <li>
-                <a class="icon-dot-circled" href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a>
-                <time datetime="2021-08-12T13:53:45">2021.08.12</time>
-              </li>
-              <li>
-                <a class="icon-dot-circled" href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
-                <time datetime="2021-08-12T13:53:45">2021.08.12</time>
-              </li>
-            </ul>
-            
-          </div>
-          <div role="tabpanel" class="tab-pannel" id="panelArchive" aria-labelledby="buttonArchive">
-            <ul class="archive-list board-list">
-              <li>
-                <a class="icon-dot-circled" href="#">디자인 사이트 링크 모음</a>
-                <time datetime="2021-08-12T13:53:45">2021.08.12</time>
-              </li>
-              <li>
-                <a class="icon-dot-circled" href="#">웹 접근성 관련 자료 모음</a>
-                <time datetime="2021-08-12T13:53:45">2021.08.12</time>
-              </li>
-              <li>
-                <a class="icon-dot-circled" href="#">예제 샘플 응용해보기</a>
-                <time datetime="2021-08-12T13:53:45">2021.08.12</time>
-              </li>
-              <li>
-                <a class="icon-dot-circled" href="#">웹 접근성 향상을위한 국가 표준 기술 가이드라인</a>
-                <time datetime="2021-08-12T13:53:45">2021.08.12</time>
-              </li>
-              <li>
-                <a class="icon-dot-circled" href="#">로얄티 프리 이미지 자료</a>
-                <time datetime="2021-08-12T13:53:45">2021.08.12</time>
-              </li>    
-            </ul>
-          </div>
+        <div role="tabpanel" class="tab-panel is-select" id="panelNotice" aria-labelledby="buttonNotice">
+          <ul class="notice-list board-list">
+            <li>
+              <a class="icon-dot-circled" href="/">HTML의 모든 것을 알려주마 샘플 활용법</a>
+              <time datetime="2021-08-12T13:53:45">2021.08.12</time>
+            </li>
+            <li>
+              <a class="icon-dot-circled" href="/">W3C 사이트 리뉴얼 및 공지사항</a>
+              <time datetime="2021-08-12T13:53:45">2021.08.12</time>
+            </li>
+            <li>
+              <a class="icon-dot-circled" href="/">KWCAG 2.1 소식</a>
+              <time datetime="2021-08-12T13:53:45">2021.08.12</time>
+            </li>
+            <li>
+              <a class="icon-dot-circled" href="/">서버 점검으로 인한 사이트 이용안내 입니다.</a>
+              <time datetime="2021-08-12T13:53:45">2021.08.12</time>
+            </li>
+            <li>
+              <a class="icon-dot-circled" href="/">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
+              <time datetime="2021-08-12T13:53:45">2021.08.12</time>
+            </li>
+          </ul>
+          <a href="/" class="icon-plus more board-more" title="공지사항">더보기</a>
+        </div>
+        <div role="tabpanel" class="tab-panel" id="panelArchive" aria-labelledby="buttonArchive">
+          <ul class="archive-list board-list">
+            <li>
+              <a class="icon-dot-circled" href="/">디자인 사이트 링크 모음</a>
+              <time datetime="2021-08-12T13:53:45">2021.08.12</time>
+            </li>
+            <li>
+              <a class="icon-dot-circled" href="/">웹 접근성 관련 자료 모음</a>
+              <time datetime="2021-08-12T13:53:45">2021.08.12</time>
+            </li>
+            <li>
+              <a class="icon-dot-circled" href="/">예제 샘플 응용해보기</a>
+              <time datetime="2021-08-12T13:53:45">2021.08.12</time>
+            </li>
+            <li>
+              <a class="icon-dot-circled" href="/">웹 접근성 향상을위한 국가 표준 기술 가이드라인</a>
+              <time datetime="2021-08-12T13:53:45">2021.08.12</time>
+            </li>
+            <li>
+              <a class="icon-dot-circled" href="/">로얄티 프리 이미지 자료</a>
+              <time datetime="2021-08-12T13:53:45">2021.08.12</time>
+            </li>    
+          </ul>
+          <a href="/" class="icon-plus more board-more" title="자료실">더보기</a>
         </div>
       </div>
+      <section class="news">
+        <h2 class="news-title">새소식</h2>
+        <a href="/" class="news-link">
+          <article class="news-item">
+            <h3 class="news-item-title">W3C 사이트가 리뉴얼 되었습니다.</h3>
+            <time class="news-item-date" datetime="2022-07-18T16:19:23">2022.07.18</time>
+            <p class="news-item-brief">
+              디자인 및 다양한 view 환경을 고려하여 구성되어 있으며,
+              기존보다 최신 정보 및 개발자를 위한 기술 가이드도
+              찾기 쉽도록 구성되어 있습니다.
+            </p>
+            <figure class="news-item-thumbnail">
+              <img src="assets/news.gif" alt="W3C 사이트가 HTML5 발표 후 새롭게 리뉴얼 된 모습" />
+              <figcaption>W3C 리뉴얼</figcaption>
+            </figure>
+          </article>
+        </a>
+        <a href="/" class="icon-plus news-more more" title="새소식">더보기</a>
+      </section>
     </div>
     <div class="group group3">그룹3</div>
   </main>
