@@ -756,34 +756,30 @@ body{
 }
 
 /* 관련사이트 */
-.related-title{
-  margin: 5px 0;
+.related{
+  padding-top: 10px;
 }
 
-
 .related-list{
-  height: 27px;
-  overflow: hidden;
+  margin-top: 10px;
   border: 1px solid #aaa;
   border-radius: 5px;
-  background-color: white;
-  transition: heigth 0.2s, padding 0.4s;
+  background-color: #fff;
+  height: 27px;
+  overflow: hidden;
+  transition: height 400ms, padding 400ms 400ms;
+}
+
+.related-list a{
+  display: block;
+  line-height: 25px;
+  padding: 0 0 0 20px;
 }
 
 .related-list:hover, .related-list:focus{
   height: 147px;
   padding: 10px 0;
 }
-
-.related-list li{
-  line-height: 25px;
-  text-indent: 25px;
-}
-
-
-
-
-
 
 /* 슬로건 */
 .slogan{
