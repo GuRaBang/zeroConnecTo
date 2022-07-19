@@ -666,6 +666,51 @@ body{
   padding: 8px;
 }
 
+.event {
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  padding-top: 10px;
+  position: relative;
+  padding: 10px 10px;
+  border: 1px solid #aaa;
+  border-bottom: transparent;
+  border-radius: 5px 5px 0 0;
+}
+
+.event-title {
+  font-size: 18px;
+  padding-bottom: 5px;
+  font-weight: 700;
+}
+
+.accent-color{
+  color: #ed552f;
+}
+
+.event-button-wrapper{
+  background-color: lightcoral;
+  position: absolute;
+  width: 55px;
+  top: 0;
+  right: 0;
+}
+
+.event-button-prev, .event-button-next{
+  background-image: url(./images/back_forward.png);
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  border: 0;
+}
+
+.event-button-next{
+
+}
+
+
+.event-thumbnail img{
+  margin-bottom: 10px;
+  box-shadow: 5px 5px #aaa;
+}
+
 
 
 
