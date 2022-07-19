@@ -675,7 +675,7 @@ body{
 }
 
 .accent-color{
-  color: #d16527;
+  color: #ed552f;
 }
 
 .event{
@@ -685,7 +685,7 @@ body{
   align-items: flex-start;
 }
 
-.event-title{
+.event-title, .related-title{
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -715,6 +715,7 @@ body{
 .event-button-next{
   background-position: -36px 0;
 } */
+
 .event-button-container{
   padding: 4px;
   margin-left: auto;
@@ -737,7 +738,6 @@ body{
   background-position: -36px 0;
 }
 
-
 .event-detail{
   width: 100%;
 }
@@ -754,6 +754,37 @@ body{
   border: 1px solid #aaa;
   box-shadow: 5px 5px 0 0 #aaa;
 }
+
+/* 관련사이트 */
+.related-title{
+  margin: 5px 0;
+}
+
+
+.related-list{
+  height: 27px;
+  overflow: hidden;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background-color: white;
+  transition: heigth 0.2s, padding 0.4s;
+}
+
+.related-list:hover, .related-list:focus{
+  height: 147px;
+  padding: 10px 0;
+}
+
+.related-list li{
+  line-height: 25px;
+  text-indent: 25px;
+}
+
+
+
+
+
+
 /* 슬로건 */
 .slogan{
   background: lime;
