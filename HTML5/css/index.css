@@ -39,6 +39,20 @@ body{
   font-size: 1.4rem;
 }
 
+/*스킵네비게이션*/
+.skip-nav a:focus{
+  display: flex;  
+}
+
+.skip-nav a{
+  padding: 4px 0;
+  display:none;
+  flex-flow: row nowrap;
+  justify-content: center;
+  background: #000;
+  color: #fff;
+}
+
 /* 레이아웃 */
 .header, .visual, .main, .slogan, .footer-inner{
   width: 940px;
@@ -783,7 +797,7 @@ body{
 
 .favorite{
   position: relative;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .favorite-more{
@@ -800,41 +814,45 @@ body{
 }
 
 .favorite-list li{
+  position: relative;
   margin-top: 8px;
   counter-increment: list-number;
 }
 
 .favorite-list li::before{
   content: counter(list-number);
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  text-align: center;
+  display: inline-flex;
+  padding: 2px 5px 1px;
+  font-size: 1.1rem;
   background-color: #aaa;
   color: #fff;
-  border-radius: 3px;
+  border-radius: 4px;
+  min-width: 1.5em;
+  justify-content: center;
+  margin-right: 0.5em;
 }
 
 .favorite-list a{
-  padding-left: 5px;
+  vertical-align: middle;
 }
 
 .up, .down, .stop{
-  display: inline-block;
-  float: right;
-  width: 11px;
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  right: 0;
+  width: 9px;
   height: 11px;
   background-image: url(./images/rank.png) ;
   background-repeat: no-repeat;
-  line-height: 16px;
 }
 
 .down{
-  background-position: 0 -44px;
+  background-position: 0 100%;
 }
 
 .stop{
-  background-position: 0 -21px;
+  background-position: 0 50%;
 }
 
 /* 슬로건 */
