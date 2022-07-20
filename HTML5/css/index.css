@@ -870,13 +870,14 @@ body{
   background-color: #fff;
   position: relative;
   padding: 10px 100px 10px 180px;
+  /*margin-top: -90px;*/
 }
 
 .slogan-title{
   color: transparent;
   position: absolute;
   left: 35px;
-  bottom: -25px;
+  bottom: -25px; 
   width: 110px;
   height: 83px;
   line-height: 83px;
@@ -915,7 +916,35 @@ body{
 .footer{
   background:  #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #ddd 60%, #fff 100%);
 }
+
 .footer-inner{
-  background: coral;
-  height: 350px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: 
+  "logo guide badge"
+  "none address badge"
+  "none copyright badge";
+}
+
+.guide-list{
+  display: flex;
+  flex-flow: row nowrap;
+  grid-area: guide;
+}
+
+.footer-logo{
+  grid-area: logo;
+}
+
+.address{
+  grid-area: address;
+}
+
+.copyright{
+  grid-area: copyright;
+}
+
+.badge-container{
+  grid-area: badge;
 }
