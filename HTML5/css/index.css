@@ -919,32 +919,47 @@ body{
 
 .footer-inner{
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-areas: 
-  "logo guide badge"
-  "none address badge"
-  "none copyright badge";
-}
-
-.guide-list{
-  display: flex;
-  flex-flow: row nowrap;
-  grid-area: guide;
+  grid-template-columns: 140px 1fr 120px;
+  padding: 20px 0;
 }
 
 .footer-logo{
-  grid-area: logo;
+  /*grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 4;
+  grid-column-end: 2;*/
+  grid-area: 1/1/4/2;
+  align-self: center;
+  justify-self: center;
+}
+
+.guide-list{
+  grid-area: 1/2/2/3;
+  background-color: #7b8385;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  border-radius: 20px;
+  padding: 4px 20px;
+  margin: 5 20px;
+  text-transform: uppercase;
+}
+
+.guide-list a{
+  display: block;
+  padding: 6px 10px;
 }
 
 .address{
-  grid-area: address;
+  grid-area: 2/2/3/3;
+  margin: 5px 20px;
 }
 
 .copyright{
-  grid-area: copyright;
+  grid-area: 3/2/4/3;
 }
 
 .badge-container{
-  grid-area: badge;
+  grid-area: 1/3/4/4;
 }
