@@ -41,6 +41,11 @@
 }
 
 /*공통검색폼*/
+input[type="search"]{
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .searchForm__group{
   display: flex;
   flex-flow: row nowrap;
