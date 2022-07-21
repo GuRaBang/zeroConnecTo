@@ -115,8 +115,37 @@ input[type="search"]{
     position: absolute;
     top: 3.75rem;
     right: var(--spacing-md);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-flow: row  wrap;
+    justify-content: space-between;
+    overflow: hidden;
   }
 
+  .button--burgerBarTop, .button--burgerBarMiddle, .button--burgerBarBottom{
+    width: 50px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 2px;
+  }
+
+  .is--active .button--burgerBarMiddle{
+    position: relative;
+    left: -52px;
+  }
+
+  .is--active .button--burgerBarTop{
+    transform-origin: 0px 10px;
+    transform: rotate(45deg);
+  }
+
+  .is--active .button--burgerBarBottom{
+    transform-origin: 5px 5px;
+    transform: rotate(-45deg);
+  }
+
+  
 
 }
 
