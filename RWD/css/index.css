@@ -163,6 +163,30 @@ input[type="search"]{
   color: var(--accent-twitter);
 }
 
+/*공통 추천서적*/
+.book{
+  padding: 0 var(--spacing-base);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.book__title{
+  width: 100%;
+}
+
+.book__cover{
+  text-align: center;
+}
+
+.book__info{
+  width: 6.25rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+
 
 /*모바일 디바이스 (Mobile Device)*/
 @media (min-width: 320px) and (max-width: 768px) {
