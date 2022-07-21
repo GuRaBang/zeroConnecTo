@@ -105,15 +105,26 @@ input[type="search"]{
 }
 
 /*공통 메인 콘텐츠 섹션 제목*/
-.sprite{
-  background: url(../images/sprite_main.png) no-repeat;
-  background-size: 58px; 
-  padding: 0 62px;
-  height: 59px;
+.appMain [class*="__title"]{
+  margin-bottom: var(--spacing-base);
+  font-weight: 700;
+  font-size: var(--text-md);
 }
 
-.sprite span{
-  display: block;
+.appMain [class*="__enTitle"]{
+  font-weight: 400;
+  font-size: var(--text-base);
+}
+
+.sprite{
+  padding-left: 4rem;
+  min-height: 3.75rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  background-image: url(../images/sprite_main.png);
+  background-repeat: no-repeat;
+  background-size: 58px; 
 }
 
 .spriteNews{
@@ -131,7 +142,6 @@ input[type="search"]{
 .spriteTwitter{
   background-position-y: -460px;
 }
-
 
 .accentBook{
   color: var(--accent-book);
