@@ -24,14 +24,14 @@ body{
 }
 
 /* 유연한 미디어 */
-/*
+
 img{
   max-width: 100%;
   height: auto;
 }
 
-video, iframe{
+video{
   width: 100%;
   height: auto;
 }
-*/
+
