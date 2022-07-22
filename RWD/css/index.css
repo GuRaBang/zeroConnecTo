@@ -295,6 +295,19 @@ input[type="search"]{
   margin-top: var(--spacing-xs);
 }
 
+/* 공통 푸터 */
+.appFooter{
+  background: var(--primary-color);
+  color: var(--white);
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.address{
+  margin-bottom: var(--spacing-base);
+}
+
+
+
 /*모바일 디바이스 (Mobile Device)*/
 @media (min-width: 320px) and (max-width: 768px) {
   /*모바일 헤더*/
@@ -406,19 +419,34 @@ input[type="search"]{
 
   /* 모바일 메인콘텐츠 */
 .appMain{
-  background-color: lemonchiffon;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: var(--spacing-base);
+}
+
+.book, .news, .favorite, .twitter, .board{
+  width: 100%;
+}
+
+/* 모바일 푸터 */
+.address{
   display: flex;
   flex-flow: column nowrap;
-  gap: var(--spacing-base);
 }
 }
 
 /* 모바일 Medium Size (640px 이상) */
 @media (min-width: 640px) and (max-width:767px){
   /* 모바일(MD) 메인콘텐츠 */
-  .appMain{
-    background-color: pink;
-
+  .news{
+    order: -1;
+  }
+  .book{
+    order: 1;
+  }
+  .book, .board, .favorite, .twitter{
+    width: 48%;
   }
 
 }
@@ -493,32 +521,39 @@ input[type="search"]{
   .appMain{
     /* background-color: skyblue; */
     display: grid;
-    grid-template-columns: repeat(12, 63px);
-    row-gap: var(--spacing-base);
-    column-gap: var(--spacing-base);
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "news news news news news news news news news news news news"
+                        "news news news news news news news news news news news news"
+                        "book book book book book favorite favorite favorite twitter twitter twitter twitter"
+                        "book book book book book . board board board board board board";
+    gap: var(--spacing-base);
   }
 
   .book{
-    grid-area: 2/1/4/5;
+    grid-area: book;
   }
 
   .news{
-    grid-area: 1/1/2/13;
+    grid-area: news;
   }
 
   .board{
-    grid-area: 3/6/4/13;
+    grid-area: board;
   }
 
   .favorite{
-    grid-area: 2/5/3/8;
+    grid-area: favorite;
   }
 
   .twitter{
-    grid-area: 2/8/3/13;
+    grid-area: twitter;
   }
 
+  /* 데스크탑 푸터 */
+  .appFooter{
+    text-align: center;
+  }
 }
 
 
