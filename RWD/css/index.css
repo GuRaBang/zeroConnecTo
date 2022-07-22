@@ -403,6 +403,24 @@ input[type="search"]{
     margin-left: var(--spacing-xs);
     font-size: var(--text-sm);
   }
+
+  /* 모바일 메인콘텐츠 */
+.appMain{
+  background-color: lemonchiffon;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--spacing-base);
+}
+}
+
+/* 모바일 Medium Size (640px 이상) */
+@media (min-width: 640px) and (max-width:767px){
+  /* 모바일(MD) 메인콘텐츠 */
+  .appMain{
+    background-color: pink;
+
+  }
+
 }
 
 
@@ -463,13 +481,42 @@ input[type="search"]{
     max-width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
-    
   }
 
   /* 데스트탑 트위터 */
   .twitter__userProfile{
     width: 100px;
     height: 100px;
+  }
+
+  /* 데스크탑 메인 콘텐츠 */
+  .appMain{
+    /* background-color: skyblue; */
+    display: grid;
+    grid-template-columns: repeat(12, 63px);
+    row-gap: var(--spacing-base);
+    column-gap: var(--spacing-base);
+    grid-template-rows: 2fr 1fr 1fr;
+  }
+
+  .book{
+    grid-area: 2/1/4/5;
+  }
+
+  .news{
+    grid-area: 1/1/2/13;
+  }
+
+  .board{
+    grid-area: 3/6/4/13;
+  }
+
+  .favorite{
+    grid-area: 2/5/3/8;
+  }
+
+  .twitter{
+    grid-area: 2/8/3/13;
   }
 
 }
