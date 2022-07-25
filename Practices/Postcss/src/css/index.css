@@ -1,0 +1,26 @@
+@import url(./reset.css);
+
+body{
+  font-size: 20px;
+  background-color: yellow;
+  line-height: 1.5;
+  color: #000;
+}
+
+@media(min-width: 1024px){
+  body{
+    background-color: yellow;
+  }
+}
+
+@media(min-width: 1024px){
+  body{
+    color: blue;
+  }
+}
+
+@media(min-width: 1024px){
+  body{
+    font-size: 36px;
+  }
+}
