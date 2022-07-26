@@ -1,0 +1,26 @@
+{
+  "name": "zerohtml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuRaBang/zeroConnecTo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuRaBang/zeroConnecTo/issues"
+  },
+  "homepage": "https://github.com/GuRaBang/zeroConnecTo#readme",
+  "devDependencies": {
+    "postcss-combine-media-query": "^1.0.1",
+    "postcss-import": "^14.1.0",
+    "postcss-preset-env": "^7.7.2",
+    "postcss-pxtorem": "^6.0.0"
+  }
+}
