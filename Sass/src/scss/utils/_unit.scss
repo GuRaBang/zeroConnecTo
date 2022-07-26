@@ -1,0 +1,18 @@
+@use "sass:math";
+
+$rootUnit: 16px !default;
+
+@function removeUnit($value){
+  @return math.div($value, $value * 0 + 1);
+  // math.div(16px , 16px*0+1=1px) = 16!!
+}
+
+@function rem($value, $base: $rootUnit){
+  @return (removeUnit(math.div($value, $base))) * 1rem;
+  // math.div(16px , 16px*0+1=1px) = 16!!
+}
+
+@function em($value, $base: $rootUnit){
+  @return (removeUnit(math.div($value, $base))) * 1em;
+  // math.div(16px , 16px*0+1=1px) = 16!!
+}
