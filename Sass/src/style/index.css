@@ -425,7 +425,48 @@ iframe {
 }
 .button--fill {
   border-right-color: #988574;
+  background-color: #988574;
   color: #fff;
+}
+.button--none {
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.button--burger {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+.button--burgerBarTop, .button--burgerBarMiddle, .button--burgerBarBottom {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 20%;
+  background: #fff;
+  border-radius: 0.5rem;
+}
+.button--burgerBarMiddle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.button--burgerBarBottom {
+  top: 100%;
+  transform: translateY(-100%);
+}
+.is--active .button--burgerBarMiddle {
+  top: 50%;
+  transform: translate(120%, -50%) rotate(0deg);
+}
+.is--active .button--burgerBarTop {
+  top: 50%;
+  transform: translate(0%, 50%) rotate(45deg);
+}
+.is--active .button--burgerBarBottom {
+  top: 50%;
+  transform: translate(0%, 50%) rotate(-45deg);
 }
 
 .formInput__input {
@@ -461,6 +502,20 @@ iframe {
     margin-left: auto;
     margin-right: auto;
     background-color: yellow;
+  }
+}
+@media (max-width: 767px) {
+  .appHeader .buttonWrapper {
+    position: absolute;
+    top: 3.25rem;
+    right: 1.25rem;
+    overflow: hidden;
+    padding: 0.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .appHeader .buttonWrapper {
+    display: noen;
   }
 }
 

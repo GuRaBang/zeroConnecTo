@@ -9,6 +9,52 @@
 
   &--fill{
     border-right-color: $secondary-color;
+    background-color: $secondary-color;
     color: $white;
+  }
+
+  &--none{
+    border: 0;
+    background: transparent;
+    padding: 0;
+  } 
+}
+
+.button--burger{
+
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+
+  &BarTop,
+  &BarMiddle,
+  &BarBottom{
+    @include posLeft(0,0);
+    width: 100%;
+    height: 20%;
+    background: #fff;
+    border-radius: rem(8px);
+  }
+
+  &BarMiddle{
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &BarBottom{
+    top: 100%;
+    transform: translateY(-100%);
+  }
+
+  .is--active &BarMiddle{
+    @include transRotate(-120%, 50%);
+  }
+
+  .is--active &BarTop{
+    @include transRotate(0%, -50%, 45);
+  }
+
+  .is--active &BarBottom{
+    @include transRotate(0%, -50%, -45);
   }
 }

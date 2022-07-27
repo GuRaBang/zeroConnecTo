@@ -17,6 +17,18 @@
     @include boxSizeMax;
     background-color: yellow;
   }
+
+  .buttonWrapper{
+    @include mobile{
+      // 위치지정
+      @include posRight(52px, 20px);
+      overflow: hidden;
+      padding: rem(4px);
+    }
+    @include desktop{
+      display: noen;
+    }
+  }
 }
 
 // 로고``
@@ -48,7 +60,7 @@
 // 검색폼
 .searchForm{
   margin-top: rem(16px);
-  
+
   &__group{
     @include flexbox($j: flex-end);
   }

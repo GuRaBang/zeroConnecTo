@@ -36,7 +36,17 @@
   left: $l;
 }
 
+@mixin posRight($t, $r, $pos: absolute){
+  position: $pos;
+  top: rem($t);
+  right: rem($r);
+}
 
+@mixin posLeft($t, $l, $pos: absolute){
+  position: $pos;
+  top: rem($t);
+  left: rem($l);
+}
 
 @mixin posCenterX($pos: absolute){
   position: $pos;
@@ -55,6 +65,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+// transform 관련 믹스인
+@mixin transRotate($tx, $ty, $rotate: 0){
+  top: 50%;
+  transform: translate(-$tx, -$ty) rotate(#{$rotate}+"deg");
 }
 
 // 박스의 최소 및 최대 너비를 설정하기 위한 믹스인
