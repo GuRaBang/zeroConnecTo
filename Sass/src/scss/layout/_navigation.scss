@@ -1,1 +1,37 @@
-// navigation.scss
+@use "./../utils" as *;
+
+.menu{
+  &.is--active{
+    transform: none;
+  }
+
+  @include mobile{
+    @include posLeft(0, 0, fixed);
+    width: 70%;
+    height: 100vh;
+    background: rgba($green, 0.85);
+    backdrop-filter: blur(4px);
+    transform: translateX(-120%);
+  }
+
+  @include desktop{
+    background: $secondary-color;
+
+    &__list{
+      @include boxSizeMax;
+      @include flexbox($j: space-between);
+    }
+  }
+  
+      &__item{
+        @include MarginY(16px);
+      }
+
+  &__link{
+    @include PaddingY(8px);
+    @include desktop{
+      color: $white;
+      text-shadow: 1px 1px 0 $black, -1px -1px 0 $black;
+    }
+  }
+}

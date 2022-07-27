@@ -122,4 +122,28 @@
 @mixin textStyle($size){
   font-size: rem($size);
   letter-spacing: -0.02em;
+  line-height: 1.5;
+}
+
+@mixin textHeading($size){
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  font-size: rem($size);
+}
+// 그리드 믹스인
+/*
+@mixin gridArea($title){
+  grid-area: $title;
+  &__enTitle{
+    display: block;
+  }
+}
+*/
+
+@mixin gridBox($column-count: 12, $gap: 0){
+  display: grid;
+  grid-template-columns: repeat($column-count, 1fr);
+  grid-template-rows: auto;
+  gap: rem($gap);
 }
