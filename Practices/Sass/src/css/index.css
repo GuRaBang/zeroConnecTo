@@ -10,4 +10,8 @@
   color: teal;
 }
 
+body {
+  font-size: rem(24px);
+}
+
 /*# sourceMappingURL=index.css.map */

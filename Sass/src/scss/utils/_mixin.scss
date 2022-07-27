@@ -30,6 +30,13 @@
 }
 
 // position관련 mixin
+@mixin pos($pos:absolute, $t: inintial, $l: initial){
+  position: $pos;
+  top: $t;
+  left: $l;
+}
+
+
 
 @mixin posCenterX($pos: absolute){
   position: $pos;
